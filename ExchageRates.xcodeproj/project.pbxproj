@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1ED4C01DCA7AB20036FBCB /* TableViewPickerViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ED4BF1DCA7AB20036FBCB /* TableViewPickerViewDataSourceDelegate.swift */; };
 		0D23BC8F1D8B06F30070BC88 /* RateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D23BC8E1D8B06F30070BC88 /* RateObject.swift */; };
 		0D4ADD791D99215A0007CC5C /* ViewControllerCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4ADD781D99215A0007CC5C /* ViewControllerCalculator.swift */; };
 		0D7C72B11D9B673700A2506E /* ExchangeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C72B01D9B673700A2506E /* ExchangeStruct.swift */; };
 		0DB174E31D88ADA10052671F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB174E21D88ADA10052671F /* AppDelegate.swift */; };
-		0DB174E51D88ADA10052671F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB174E41D88ADA10052671F /* ViewController.swift */; };
+		0DB174E51D88ADA10052671F /* ViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB174E41D88ADA10052671F /* ViewControllerWithTableView.swift */; };
 		0DB174E81D88ADA10052671F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB174E61D88ADA10052671F /* Main.storyboard */; };
 		0DB174EA1D88ADA20052671F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DB174E91D88ADA20052671F /* Assets.xcassets */; };
 		0DB174ED1D88ADA20052671F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB174EB1D88ADA20052671F /* LaunchScreen.storyboard */; };
@@ -39,12 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1ED4BF1DCA7AB20036FBCB /* TableViewPickerViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewPickerViewDataSourceDelegate.swift; sourceTree = "<group>"; };
 		0D23BC8E1D8B06F30070BC88 /* RateObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateObject.swift; sourceTree = "<group>"; };
 		0D4ADD781D99215A0007CC5C /* ViewControllerCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCalculator.swift; sourceTree = "<group>"; };
 		0D7C72B01D9B673700A2506E /* ExchangeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeStruct.swift; sourceTree = "<group>"; };
 		0DB174DF1D88ADA10052671F /* ExchageRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchageRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DB174E21D88ADA10052671F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DB174E41D88ADA10052671F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DB174E41D88ADA10052671F /* ViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTableView.swift; sourceTree = "<group>"; };
 		0DB174E71D88ADA10052671F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DB174E91D88ADA20052671F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DB174EC1D88ADA20052671F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1ED4C11DCA85120036FBCB /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0DB175101D88AE6C0052671F /* SwiftyJSON.swift */,
+				0DB175121D88AEB20052671F /* RestApiManager.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		0D1ED4C21DCA85340036FBCB /* TableVC */ = {
+			isa = PBXGroup;
+			children = (
+				0DB174E41D88ADA10052671F /* ViewControllerWithTableView.swift */,
+				0D1ED4BF1DCA7AB20036FBCB /* TableViewPickerViewDataSourceDelegate.swift */,
+			);
+			name = TableVC;
+			sourceTree = "<group>";
+		};
+		0D1ED4C31DCA857A0036FBCB /* StructAndObject */ = {
+			isa = PBXGroup;
+			children = (
+				0D7C72B01D9B673700A2506E /* ExchangeStruct.swift */,
+				0D23BC8E1D8B06F30070BC88 /* RateObject.swift */,
+			);
+			name = StructAndObject;
+			sourceTree = "<group>";
+		};
+		0D1ED4C41DCA85A40036FBCB /* VCCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				0D4ADD781D99215A0007CC5C /* ViewControllerCalculator.swift */,
+			);
+			name = VCCalculator;
+			sourceTree = "<group>";
+		};
 		0DB174D61D88AD9F0052671F = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				0DB174E21D88ADA10052671F /* AppDelegate.swift */,
-				0DB174E41D88ADA10052671F /* ViewController.swift */,
-				0D7C72B01D9B673700A2506E /* ExchangeStruct.swift */,
-				0D4ADD781D99215A0007CC5C /* ViewControllerCalculator.swift */,
-				0DB175101D88AE6C0052671F /* SwiftyJSON.swift */,
-				0DB175121D88AEB20052671F /* RestApiManager.swift */,
-				0D23BC8E1D8B06F30070BC88 /* RateObject.swift */,
+				0D1ED4C41DCA85A40036FBCB /* VCCalculator */,
+				0D1ED4C31DCA857A0036FBCB /* StructAndObject */,
+				0D1ED4C21DCA85340036FBCB /* TableVC */,
+				0D1ED4C11DCA85120036FBCB /* JSON */,
 				0DB174E61D88ADA10052671F /* Main.storyboard */,
 				0DB174E91D88ADA20052671F /* Assets.xcassets */,
 				0DB174EB1D88ADA20052671F /* LaunchScreen.storyboard */,
@@ -271,11 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1ED4C01DCA7AB20036FBCB /* TableViewPickerViewDataSourceDelegate.swift in Sources */,
 				0D23BC8F1D8B06F30070BC88 /* RateObject.swift in Sources */,
 				0DB175111D88AE6C0052671F /* SwiftyJSON.swift in Sources */,
 				0D4ADD791D99215A0007CC5C /* ViewControllerCalculator.swift in Sources */,
 				0D7C72B11D9B673700A2506E /* ExchangeStruct.swift in Sources */,
-				0DB174E51D88ADA10052671F /* ViewController.swift in Sources */,
+				0DB174E51D88ADA10052671F /* ViewControllerWithTableView.swift in Sources */,
 				0DB175131D88AEB20052671F /* RestApiManager.swift in Sources */,
 				0DB174E31D88ADA10052671F /* AppDelegate.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Darwin
 
 class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
     
@@ -15,13 +16,14 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldChangeFrom: UITextField!
     @IBOutlet weak var textChangeTo: UILabel!
     @IBOutlet weak var textChangeFrom: UILabel!
-
+    
     var calcStruct : ExchangeStruct?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldChangeFrom.delegate = self
         setInfo()
+        
         //tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -29,17 +31,12 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
     
     //allow custom characters only
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let inverseSet = NSCharacterSet(charactersInString:"0123456789.").invertedSet
-
+        
         let components = string.componentsSeparatedByCharactersInSet(inverseSet)
         
         let filtered = components.joinWithSeparator("")
@@ -47,7 +44,21 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
         return string == filtered
     }
     
+}
+
+
+private extension ViewControllerCalculator{
     
+    func setInfo(){
+        textChangeFrom.text = calcStruct?.textFrom
+        textChangeTo.text = calcStruct?.textTo
+    }
+    
+    func clearNumberInfo(){
+        textFieldChangeFrom.text = ""
+        textNumberChangeTo.text = "0"
+    }
+
     @IBAction func textFieldEditingDidChange(sender: AnyObject) {
         var result : Float
         
@@ -65,11 +76,11 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
             if textFieldChangeFrom.text![(textFieldChangeFrom.text?.startIndex)!] == "."{
                 clearNumberInfo()
             }
-            //prevent to have more dots so the value stays float
+                //prevent to have more dots so the value stays float
             else if dotCounter>1{
                 textFieldChangeFrom.text?.removeAtIndex((textIn?.endIndex.predecessor())!)
             }
-            //if the value is correct, convert it to another rate and display it
+                //if the value is correct, convert it to another rate and display it
             else{
                 let numberFrom : Float = Float(textFieldChangeFrom.text!)!
                 result = numberFrom * (calcStruct?.numberTo)!
@@ -78,12 +89,14 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
                 
             }
         }
+        
         //clear textfield change from and text number change to, so it's blank when user delete characters from text field
         else {
             clearNumberInfo()
         }
-
+        
     }
+    
     //button to switch rates
     @IBAction func buttonSwitch(sender: AnyObject) {
         let textSwitch : String = (calcStruct?.textFrom)!
@@ -98,16 +111,7 @@ class ViewControllerCalculator: UIViewController, UITextFieldDelegate {
         clearNumberInfo()
         
     }
-    
-    
-    func setInfo(){
-        textChangeFrom.text = calcStruct?.textFrom
-        textChangeTo.text = calcStruct?.textTo
-    }
-    
-    func clearNumberInfo(){
-        textFieldChangeFrom.text = ""
-        textNumberChangeTo.text = "0"
-    }
+  
 }
+
 
