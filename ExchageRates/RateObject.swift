@@ -19,8 +19,5 @@ class RateObject{
         base = json["base"].stringValue
         date = json["date"].stringValue
         rateDictionary = json["rates"].dictionaryValue
-        
-        
-        
     }
 }

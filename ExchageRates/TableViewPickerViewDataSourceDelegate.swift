@@ -27,6 +27,7 @@ class TableViewDataSourceAndDelegate: NSObject, UITableViewDataSource, UITableVi
         let rateName = self.arrayRates[indexPath.row].0 + " : " + String(self.arrayRates[indexPath.row].1.roundTo(2))
         
         cell.textLabel?.text = rateName
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }
