@@ -27,7 +27,7 @@ class TableViewDataSourceAndDelegate: NSObject, UITableViewDataSource, UITableVi
         let rateName = self.arrayRates[indexPath.row].0 + " : " + String(self.arrayRates[indexPath.row].1.roundTo(2))
         
         cell.textLabel?.text = rateName
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.darkBlue()
         
         return cell
     }
@@ -83,4 +83,10 @@ class TableViewDataSourceAndDelegate: NSObject, UITableViewDataSource, UITableVi
         return baseName
     }
     
+}
+
+extension UIColor {
+    static func darkBlue() -> UIColor {
+        return UIColor.init(colorLiteralRed: 13.0/255, green: 0.0/255, blue: 98.0/255, alpha: 1.0)
+    }
 }
