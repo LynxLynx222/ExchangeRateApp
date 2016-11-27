@@ -19,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="29" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wIt-6x-WCd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wIt-6x-WCd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Tch-js-amY" rowHeight="29" style="IBUITableViewCellStyleDefault" id="lx2-k9-EoX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Tch-js-amY" rowHeight="48" style="IBUITableViewCellStyleDefault" id="lx2-k9-EoX">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lx2-k9-EoX" id="h28-Kk-aqM">
@@ -48,6 +48,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="135" width="400" height="465"/>
+                                </variation>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base: EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou2-qb-jts">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -87,16 +90,11 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gWu-1N-Jg8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="2GA-0o-qfg"/>
-                            <constraint firstItem="wIt-6x-WCd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3oV-QP-SSZ"/>
                             <constraint firstItem="gWu-1N-Jg8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="DoY-US-QPV"/>
                             <constraint firstItem="scS-em-izS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="Nl6-Ky-kxk"/>
-                            <constraint firstItem="wIt-6x-WCd" firstAttribute="top" secondItem="scS-em-izS" secondAttribute="bottom" constant="8" id="POW-GN-9oa"/>
                             <constraint firstItem="scS-em-izS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwM-lO-G22"/>
                             <constraint firstItem="ou2-qb-jts" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="cwd-Cy-4aV"/>
-                            <constraint firstItem="wIt-6x-WCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKD-Nh-3gQ"/>
                             <constraint firstItem="ou2-qb-jts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="l7w-0W-kEX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wIt-6x-WCd" secondAttribute="trailing" constant="-20" id="sgm-sp-wOt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wIt-6x-WCd" secondAttribute="bottom" id="ssc-91-UGd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -106,17 +104,12 @@
                                 <exclude reference="scS-em-izS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ssc-91-UGd"/>
                                 <exclude reference="Nl6-Ky-kxk"/>
                                 <exclude reference="UwM-lO-G22"/>
                                 <exclude reference="2GA-0o-qfg"/>
                                 <exclude reference="DoY-US-QPV"/>
                                 <exclude reference="cwd-Cy-4aV"/>
                                 <exclude reference="l7w-0W-kEX"/>
-                                <exclude reference="3oV-QP-SSZ"/>
-                                <exclude reference="POW-GN-9oa"/>
-                                <exclude reference="dKD-Nh-3gQ"/>
-                                <exclude reference="sgm-sp-wOt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -127,17 +120,12 @@
                                 <include reference="scS-em-izS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ssc-91-UGd"/>
                                 <include reference="Nl6-Ky-kxk"/>
                                 <include reference="UwM-lO-G22"/>
                                 <include reference="2GA-0o-qfg"/>
                                 <include reference="DoY-US-QPV"/>
                                 <include reference="cwd-Cy-4aV"/>
                                 <include reference="l7w-0W-kEX"/>
-                                <include reference="3oV-QP-SSZ"/>
-                                <include reference="POW-GN-9oa"/>
-                                <include reference="dKD-Nh-3gQ"/>
-                                <include reference="sgm-sp-wOt"/>
                             </mask>
                         </variation>
                     </view>

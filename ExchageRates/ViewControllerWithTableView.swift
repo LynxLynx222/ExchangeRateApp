@@ -29,17 +29,14 @@ class ViewControllerWithTableView: UIViewController{
         textFieldChange.inputView = picker
         
         tbDataSource.connect("EUR", tableViewToUpdate: tableView)
-        
-        
-        //tap to dismiss keyboard
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
 }
@@ -49,12 +46,6 @@ extension Float{
     func roundTo(places: Int) -> Float{
         let divisor = pow(10.0, Float(places))
         return round((self * divisor)) / divisor
-    }
-}
-
-extension UIViewController{
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 
@@ -76,9 +67,11 @@ extension ViewControllerWithTableView{
         textBase!.text = "Base: " + tbDataSource.getBaseName()
         
         tbDataSource.connect(textFieldChange.text!, tableViewToUpdate: tableView)
-        
+        view.endEditing(true)
         
     }
+    
+    
 }
 
 
